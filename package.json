@@ -8,7 +8,9 @@
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \" npm run server \" \"npm run client \""
+    "dev": "concurrently \" npm run server \" \"npm run client \"",
+    "data:import": "node backend/seeder ",
+    "data:destroy": "node backend/seeder -d"
   },
   "repository": {
     "type": "git",
@@ -21,10 +23,14 @@
   },
   "homepage": "https://github.com/justbenuk/react-ecommerce#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "concurrently": "^7.4.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "mongoose": "^6.6.3",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
   }
 }
